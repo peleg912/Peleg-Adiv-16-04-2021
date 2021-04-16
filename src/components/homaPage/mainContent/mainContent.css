@@ -1,0 +1,47 @@
+.main{
+    margin: 30px 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.bg-body{
+    background-color: unset;
+}
+
+.jumbotron{
+    background-color:rgb(243, 230, 255);
+}
+
+.fiveDays{
+    margin-top: 50px;
+    margin-left: 8%;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.fav{
+    position: absolute;
+    left: 90%;
+    top: 10%;
+    animation-name: fav;
+    animation-duration: 3s;
+    color: violet;
+    background-color: white;
+    cursor: pointer;
+}
+
+.dis{
+    position: absolute;
+    padding: 2px;
+    left: 90%;
+    top: 10%;
+    background-color: white;
+    cursor: pointer;
+}
+
+@keyframes fav {
+   0%   {background-color: white; left:70px; top:0px;} 
+  }
