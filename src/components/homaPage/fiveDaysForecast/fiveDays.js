@@ -1,49 +1,46 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect} from 'react';
 import DailyCard from '../dailyCard/dailyCard';
 import axios from 'axios';
 import {connect} from 'react-redux';
 
-class FiveDays extends Component{
+const FiveDays = (props)=> {
+  
+    const [state, setState] = useState({fiveDays: [], text: ''});
 
-    state = {
-        fiveDays: []
-    }
-
-    componentDidMount = async()=> {
+    useEffect ( async()=> {
         try {
-            const res = await axios.get
-            (`${process.env.REACT_APP_MAIN_URL}/forecasts/v1/daily/5day/${this.props.id}?apikey=${process.env.REACT_APP_API_KEY}`);
-            this.setState({fiveDays: res.data});
+            const res = await axios.get(`${process.env.REACT_APP_MAIN_URL}/forecasts/v1/daily/5day/${props.id}?apikey=${process.env.REACT_APP_API_KEY}?metric=true`);
+            setState({
+             fiveDays: res.data.DailyForecasts,
+             text: res.data.DailyForecasts.Day.IconPhrase});
+             console.log(res.data.DailyForecasts);
         } catch (error) {
             alert(error);
         }
-    }
+    }, []);
+
     
-    render(){
         return(
         <>
          <h1>
-          <b>Mostly Sunny</b> 
+          <b>{state.text}</b> 
         </h1>
 
         <div className="row row-cols-5 gx-5 gy-5 fiveDays">
-            {/* { this.state.fiveDays.map(obj=> {
-                return( */}
+             {state.fiveDays.map(obj=> (
                     <DailyCard
-                    className="col"/>
-                    {/* // key={obj.key}
-                    // day= {obj.name}
-                    // temp={obj.temp}/> */}
-                {/* )
-            })
-        } */}
-                
+                    className="col"
+                    key={obj.Date}
+                    day= {obj.name}
+                    temp={obj.Temperature.Maximum.Value}
+                    weather={state.text}/> 
+                 ))} 
         </div>
         </>
 
         )
     }
-}
+
 
 
 const mapStateToProps = (state)=> {

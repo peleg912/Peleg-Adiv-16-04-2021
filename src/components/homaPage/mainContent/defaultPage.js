@@ -6,6 +6,7 @@ import SearchBar from '../searchBar/searchBar';
 import {connect} from 'react-redux';
 
 const defaultPage = (props)=> {
+    console.log(props.weather);
     return(
         <>
            <SearchBar/>
@@ -28,7 +29,7 @@ const defaultPage = (props)=> {
             </div>}
 
 
-            <FiveDays/>
+            <FiveDays />
             
             
 

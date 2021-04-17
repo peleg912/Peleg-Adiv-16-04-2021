@@ -3,7 +3,7 @@ const initialState = {
     currentCity: {
         name: 'Tel aviv',
         key: '215854',
-        temp: '',
+        temp: '28',
         like: false
     },
     favorites: []
@@ -46,7 +46,8 @@ const reducer = (state = initialState, action)=> {
                 ...state,
                 favorites: state.favorites.concat({
                     id: action.id,
-                    name: action.name
+                    name: action.name,
+                    temp: state.currentCity.temp
                 }),
                 currentCity:{
                     ...state.currentCity,

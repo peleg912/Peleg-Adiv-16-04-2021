@@ -20,6 +20,8 @@ const cityCard = (props)=> {
     )
 }
 
+
+
 const mapDispatchToProps = (dispatch)=> {
   return{
     onUpdatingCity: (cityName, cityKey)=> dispatch({type: 'UPDATE_CITY', name: cityName, key: cityKey})
