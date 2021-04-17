@@ -1,0 +1,9 @@
+.city{
+    /* display: flex;
+    flex-shrink: 0; */
+    width: 11rem;
+    height: 13rem;
+    margin-left: 2%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
