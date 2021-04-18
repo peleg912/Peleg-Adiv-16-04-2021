@@ -3,8 +3,9 @@ const initialState = {
     currentCity: {
         name: 'Tel aviv',
         key: '215854',
-        temp: '28',
-        like: false
+        temp: '',
+        like: false,
+        weatherDesc: ""
     },
     favorites: []
     
@@ -38,7 +39,8 @@ const reducer = (state = initialState, action)=> {
                 ...state,
                 currentCity: {
                     ...state.currentCity,
-                    temp: action.temp
+                    temp: action.temp,
+                    weatherDesc: action.desc
                 }
             }
         case 'ADD_TO_FAVORITES':
@@ -47,7 +49,8 @@ const reducer = (state = initialState, action)=> {
                 favorites: state.favorites.concat({
                     id: action.id,
                     name: action.name,
-                    temp: state.currentCity.temp
+                    temp: state.currentCity.temp,
+                    weatherDesc: state.currentCity.weatherDesc
                 }),
                 currentCity:{
                     ...state.currentCity,

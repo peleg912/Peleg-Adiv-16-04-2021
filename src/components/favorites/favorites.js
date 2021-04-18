@@ -11,8 +11,9 @@ const favorites = (props)=> {
                     <CityCard
                     className="col"
                     key={obj.id}
+                    id={obj.id}
                     name={obj.name}
-                    weather="sunny"
+                    weather={obj.weatherDesc}
                     temp={obj.temp}/>
                 )
             })}

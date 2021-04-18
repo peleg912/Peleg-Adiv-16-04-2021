@@ -11,7 +11,6 @@ const App = (props)=> {
   const routes = (
     <Switch>
     <Route path="/favorites" component={Favorites}/>
-    {/* <Route path={`/${name}`} component={DefaultPage}/> */}
     <Route path="/" exact component={DefaultPage}/>
     <Redirect to="/"/>
     </Switch>

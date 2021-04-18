@@ -8,7 +8,7 @@ const cityCard = (props)=> {
       <Link
       to="/" 
       style={{color: 'black', textDecoration: 'none'}}
-      onClick={()=>props.onUpdatingCity(props.name, props.key)}>
+      onClick={()=>props.onUpdatingCity(props.name, props.id)}>
         <div className="card city rounded shadow">
             <div className="card-body">
                 <h4 className="card-title">{props.name}</h4>
@@ -19,7 +19,6 @@ const cityCard = (props)=> {
       </Link>
     )
 }
-
 
 
 const mapDispatchToProps = (dispatch)=> {
