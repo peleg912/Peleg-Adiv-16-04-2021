@@ -73,6 +73,7 @@ const reducer = (state = initialState, action)=> {
             } else{
                 console.log(indexToRemove);
             }
+            break;
         default: return state;
     }
    

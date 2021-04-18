@@ -1,0 +1,12 @@
+.weatherHeader{
+    text-align:center;
+    /* font-family: 'Montserrat, sans-serif'; */
+     font-weight:bold;
+}
+
+@media screen and (max-width: 576px) {
+    .weatherHeader {
+        font-size: 28px;
+        margin-top: 10px;
+    }
+  }

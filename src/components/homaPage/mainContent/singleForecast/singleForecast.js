@@ -9,7 +9,6 @@ useEffect(async()=>{
     try {
          const res = await axios.get(`${process.env.REACT_APP_MAIN_URL}/currentconditions/v1/${props.id}
          ?apikey=${process.env.REACT_APP_API_KEY}&language=en-en"`);
-         console.log(res.data);
          await props.onUpdatingTemp(res.data[0].Temperature.Metric.Value, res.data[0].WeatherText);
     } catch (error) {
         alert(error);

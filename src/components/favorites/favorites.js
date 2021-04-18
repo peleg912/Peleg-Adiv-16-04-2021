@@ -1,12 +1,13 @@
 import React from 'react';
 import CityCard from './cityCard/citycard';
 import {connect} from 'react-redux';
+import './favorites.css';
 
 const favorites = (props)=> {
   
     return(
         props.faves.length > 0?
-        <div className="row row-cols-5 gy-5" style={{marginLeft:'10%', marginTop:'1%'}}>
+        <div className="row row-cols-auto gy-5 mobile-fav" style={{marginLeft:'10%', marginTop:'1%'}}>
            {props.faves.map(obj=>{
                 return(
                     <CityCard
@@ -20,10 +21,13 @@ const favorites = (props)=> {
             })}
         </div> :
         <>
-               <img
-               className="rounded-circle shadow" 
-               style={{width:'450px', marginLeft:"33%", marginTop:'2%'}}
-               src="https://image.freepik.com/free-vector/businessman-get-idea_1133-350.jpg"/>
+
+            <div style={{marginTop:'10%', textAlign:'center'}}>
+                <h1 style={{ fontFamily: 'Montserrat, sans-serif'}}>
+                    <b>No Current Favorites :)</b>
+                </h1>
+            </div>
+
         </>
     )
 }

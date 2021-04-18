@@ -4,18 +4,44 @@
     z-index: 1;
 }
 
+@media screen and (max-width: 576px) {
+    .main {
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+  }
+
+  @media screen and (max-width: 768px) and (min-width:577px){
+    .main {
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+    }
+  }
+
+
+
 .bg-body{
     background-color: unset;
 }
 
 .jumbotron{
-    background-color:rgb(243, 230, 255);
+    background-color:ghostwhite;
 }
 
 .fiveDays{
     margin-top: 50px;
     margin-left: 8%;
 }
+
+@media screen and (max-width: 576px) {
+    .fiveDays {
+        margin-top: 20px;
+        margin-left: 16%;
+    }
+  }
 
 h1{
     font-family: 'Montserrat', sans-serif;
@@ -32,6 +58,35 @@ h1{
     background-color: white;
     cursor: pointer;
 }
+
+@media screen and (max-width: 576px) {
+    .fav {
+        top: 2%;
+        left: 80%;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+   .dis {
+        top: 2%;
+        left: 80%;
+    }
+  }
+
+  @media screen and (max-width: 768px) and (min-width:577px){
+    .fav  {
+        top: 5%;
+        left: 85%;
+    }
+  }
+
+  @media screen and (max-width: 768px) and (min-width:577px){
+   .dis  {
+        top: 5%;
+        left: 85%;
+    }
+  }
+
 
 .dis{
     position: absolute;

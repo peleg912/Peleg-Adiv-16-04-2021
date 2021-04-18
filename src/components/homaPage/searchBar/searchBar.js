@@ -34,7 +34,7 @@ const  SearchBar = (props)=>{
         }))
       }
     }catch(error){
-      alert('oops');
+      alert(error);
     }
   };
 

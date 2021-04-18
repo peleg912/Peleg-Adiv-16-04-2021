@@ -9,3 +9,17 @@ nav{
 .logo{
     border-radius: 10px;
 }
+
+@media screen and (max-width: 576px) {
+    .nav-btn {
+        position: absolute;
+        left: 75%;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .nav-title {
+        margin-left: -20px;
+        font-size: 18px;
+    }
+  }

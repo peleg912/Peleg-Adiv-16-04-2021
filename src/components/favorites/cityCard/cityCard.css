@@ -1,9 +1,14 @@
 .city{
-    /* display: flex;
-    flex-shrink: 0; */
     width: 11rem;
     height: 13rem;
     margin-left: 2%;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
+
+@media screen and (max-width: 576px) {
+    .city {
+        width: 10rem;
+       height: 10rem;
+    }
+  }
