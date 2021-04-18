@@ -12,7 +12,7 @@ const cityCard = (props)=> {
         <div className="card city rounded shadow">
             <div className="card-body">
                 <h4 className="card-title">{props.name}</h4>
-                <h5 className="card-subtitle mb-2 text-muted">{props.temp}C</h5>
+                <h5 className="card-subtitle mb-2 text-muted">{props.temp}°C</h5>
                 <h4>{props.weather}</h4>
             </div>
        </div>
