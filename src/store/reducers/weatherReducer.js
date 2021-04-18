@@ -1,5 +1,6 @@
 
 const initialState = {
+    defaultKey: '215854',
     currentCity: {
         name: 'Tel aviv',
         key: '215854',

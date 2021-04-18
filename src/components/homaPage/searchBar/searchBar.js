@@ -41,7 +41,11 @@ const  SearchBar = (props)=>{
   const getForecast = async()=> {
     try {
       const current = state.cityOptions.find(obj=> obj.LocalizedName === state.searchTerm);
-       await props.onUpdatingCity(state.searchTerm, current.Key);
+      if (current){
+        await props.onUpdatingCity(state.searchTerm, current.Key);
+      }else{
+        await props.onUpdatingCity(state.searchTerm, props.defaultKey);
+      }
     } catch (error) {
       alert(error);
     }
@@ -91,7 +95,8 @@ const  SearchBar = (props)=>{
 
 const mapStateToProps= (state)=> {
   return{
-    name: state.currentCity.name
+    name: state.currentCity.name,
+    defaultKey: state.defaultKey
   }
 }
 
