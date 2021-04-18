@@ -1,16 +1,16 @@
 import React from 'react';
-import DefaultForecast from './defaultForecast/defaultForecast';
-import './defaultPage.css';
+import SingleForecast from './singleForecast/singleForecast';
+import './homePage.css';
 import FiveDays from '../fiveDaysForecast/fiveDays';
 import SearchBar from '../searchBar/searchBar';
 import {connect} from 'react-redux';
 
-const defaultPage = (props)=> {
+const HomePage = (props)=> {
     return(
         <>
            <SearchBar/>
         <div className="jumbotron shadow rounded main">
-            <DefaultForecast/>
+            <SingleForecast/>
 
             {props.liked?
             <div className="rounded-circle dis"
@@ -52,4 +52,4 @@ const mapDispatchToProps=(dispatch)=> {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(defaultPage);
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

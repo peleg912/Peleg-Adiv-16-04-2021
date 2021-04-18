@@ -39,7 +39,9 @@ const FiveDays = (props)=> {
     
         return(
         <>
-
+        
+        <h1 style={{textAlign:'center', fontFamily: 'Montserrat, sans-serif', fontWeight:'bold'}}>{props.weatherDesc}</h1>
+        
         <div className="row row-cols-5 gx-5 gy-5 fiveDays">
              {state.fiveDays.map(obj=> (
                     <DailyCard
@@ -60,7 +62,8 @@ const FiveDays = (props)=> {
 
 const mapStateToProps = (state)=> {
     return{
-        id: state.currentCity.key
+        id: state.currentCity.key,
+        weatherDesc: state.currentCity.weatherDesc
     }
 }
 

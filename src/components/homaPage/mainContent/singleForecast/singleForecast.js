@@ -1,7 +1,7 @@
 import react, { useEffect } from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
-import './defaultForecast.css';
+import './singleForecast.css';
 
 const SingleForecast = (props)=> {
     
